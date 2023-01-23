@@ -1,6 +1,7 @@
 package com.cydeo.tests.day8_properties_config_reader;
 
 import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.WebTableUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,9 +29,10 @@ public class T1_WebTable_Order_Verify {
     public void order_name_verify_test() {
 
         //Locate the cell that has Bob Martin text in it.
-        WebElement bobMartinCell = driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']"));
+        WebElement bobMartinCell =
+                driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']"));
 
-        System.out.println("bobMartinCell.getText() = " + bobMartinCell.getText());
+       // System.out.println("bobMartinCell.getText() = " + bobMartinCell.getText());
 
         //2. Verify Bob’s name is listed as expected.
         //Expected: “Bob Martin”
@@ -52,10 +54,10 @@ public class T1_WebTable_Order_Verify {
         Assert.assertEquals(actualBobDate, expectedBobDate);
 
     }
-}
+
 
     //We use the utility method we created.
-  /*  @Test
+   @Test
     public void test2(){
 
         String costumerOrderDate1 = WebTableUtils.returnOrderDate(driver, "Alexandra Gray");
@@ -71,9 +73,9 @@ public class T1_WebTable_Order_Verify {
     @Test
     public void test3(){
 
-        WebTableUtils.orderVerify(driver, "Bart Fisher", "01/16/2021");*/
+        WebTableUtils.orderVerify(driver, "Bart Fisher", "01/16/2021");
 
-    /*}
+    }
 }
-}
-     */
+
+

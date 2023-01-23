@@ -1,9 +1,12 @@
-/*package com.cydeo.tests.day8_properties_config_reader;
+package com.cydeo.tests.day8_properties_config_reader;
 
-import com.cydeo.tests.utilities.*;
-import org.openqa.selenium.*;
-import org.testng.*;
-import org.testng.annotations.*;
+import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class T4_Config_Practice {
 
@@ -21,7 +24,8 @@ public class T4_Config_Practice {
 //
 //    }
 
-    @Test
+
+   @Test
     public void google_search_test(){
         //Driver.getDriver() --> driver
 
@@ -40,4 +44,4 @@ public class T4_Config_Practice {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
-}*/
+}
