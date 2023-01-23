@@ -1,4 +1,4 @@
-package com.cydeo.tests.utilities;
+package com.cydeo.utilities;
 
 import org.openqa.selenium.*;
 import org.testng.*;
@@ -13,8 +13,8 @@ public class WebTableUtils {
     //This method should accept a costumerName and return the costumer order date
     //as a String.
 
-    public static String returnOrderDate(WebDriver driver, String customerName){
-        String locator = "//td[.='"+customerName+"']/following-sibling::td[3]";
+    public static String returnOrderDate(WebDriver driver, String customerName) {
+        String locator = "//td[.='" + customerName + "']/following-sibling::td[3]";
         WebElement customerDateCell = driver.findElement(By.xpath(locator));
         return customerDateCell.getText();
     }
@@ -32,9 +32,9 @@ public class WebTableUtils {
     //This method should accept above-mentioned arguments and internally assert
     //expectedOrderDate matching actualOrderDate.
 
-    public static void orderVerify(WebDriver driver, String customerName, String expectedOrderDate){
+    public static void orderVerify(WebDriver driver, String customerName, String expectedOrderDate) {
 
-        String locator = "//td[.='"+customerName+"']/following-sibling::td[3]";
+        String locator = "//td[.='" + customerName + "']/following-sibling::td[3]";
         WebElement customerDateCell = driver.findElement(By.xpath(locator));
 
         String actualOrderDate = customerDateCell.getText();
