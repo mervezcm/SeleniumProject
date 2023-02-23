@@ -1,4 +1,4 @@
- package com.cydeo.utilities;
+package com.cydeo.utilities;
 
 /*
 In this class only general utility methods that are NOT related to some specific page.
